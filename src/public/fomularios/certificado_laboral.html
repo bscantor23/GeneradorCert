@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
+  <title>Certificado Laboral</title>
+  <link rel="shortcut icon" href="trabajo.ico" />
+</head>
+<body>
+  <section class="form-register">
+    <form action="http://localhost:4000/api/v2/certificados/" method="POST">
+      <h4>Certificado Laboral</h4>
+      <input type="text" name="tipo_certificado" value="Laboral" style="display:none">
+      <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese Nombres" required>
+      <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese Apellidos"required>
+  <select class="controls" name="tipo_documento" id =tipo_documento>
+       <option selected value="0"> Seleccione Tipo Documento </option>
+       <option value="CC">CC</option>
+       <option value="TI">TI</option>
+</select>
+      <input class="controls" type="number" name="numero_documento" id="codigo" placeholder="Ingrese Numero de Documento" min="1"required>
+      <input class="controls" type="text" name="ciudad" id="ciudad" placeholder="Ingrese Ciudad de Expedicion de Documento"required>
+      <label class="label" for="fecha_ingreso" color= "black">Seleccione Fecha de Ingreso </label >
+      <input class="controls" type="date" name="ingreso" id="fecha_ingreso"  required>
+      <input class="controls" type="text" name="puesto_trabajo" id="puesto_de_trabajo" placeholder="Ingrese Cargo"required>
+      <input class="controls" type="number" name="salario" id="salario" placeholder="Ingrese Salario" min="1"required>
+   <button class="botons" type="submit">Obtener PDF</button>
+
+</form>
+  </section>
+
+
+</body>
+</html>
